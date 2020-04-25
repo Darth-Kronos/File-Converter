@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h3>File uploaded successfully.</h3><br>
+    <h3>File converted successfully.</h3><br>
     <p>
-        <a href="{{ url_for('.download_file',filename = ) }}">Download</a>
+        <a href="{{ url_for('download',filename = filename) }}">Download your file</a>
     </p>
 {% endblock content %}
