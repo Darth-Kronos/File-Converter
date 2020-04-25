@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from flask import send_from_directory
 from PIL import Image
 from pydub import AudioSegment
-UPLOAD_FOLDER = "/home/darth_kronos/Documents/College/6_sem/CN/File-Converter"
+UPLOAD_FOLDER = ""
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -49,7 +49,7 @@ def image():
             convert(filename,type="image")
             file = os.path.splitext(filename)[0] + ".png"
             #return redirect(url_for('uploaded_file',filename=file))
-            return render_template('success.html', filename = filename)
+            return render_template('success.html', filename = file)
 
     return render_template('image.html')
 
