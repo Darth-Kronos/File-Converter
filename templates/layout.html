@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-
     {% if title %}
         <title>File Converter - {{ title }}</title>
     {% else %}
         <title>File Converter</title>
     {% endif %}
+    <style>
+    .footer {
+      position: bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #193b58;
+      color: white;
+      text-align: center;
+    }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -50,7 +60,10 @@
         
       </div>
     </main>
-
+    <div class="footer">
+      <p>CN Project</p>
+      <p>6th Semester</p>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
